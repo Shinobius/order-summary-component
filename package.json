@@ -1,0 +1,38 @@
+{
+  "name": "order-summary-component",
+  "version": "1.0.0",
+  "description": "My first Frontend Mentor project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shinobius/order-summary-component.git"
+  },
+  "keywords": [
+    "frontendmentor",
+    "component",
+    "card"
+  ],
+  "author": "Vladislav Seleznev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shinobius/order-summary-component/issues"
+  },
+  "homepage": "https://github.com/Shinobius/order-summary-component#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.0.2"
+  }
+}
