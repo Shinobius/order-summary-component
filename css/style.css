@@ -4,22 +4,31 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
   font-size: 62.5%;
-  font-family: "Red Hat Display", sans-serif; }
+  font-family: "Red Hat Display", sans-serif;
+}
 
 body {
   background-color: #e0e8ff;
   background-image: url("../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position-y: top;
-  height: 100vh; }
+  height: 100vh;
+  background-size: 100%;
+}
+@media (min-width: 90em) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
 
 .card {
-  width: 32.7rem;
+  min-width: 32.7rem;
+  max-width: 45rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,30 +37,58 @@ body {
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15); }
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
 
 .card__image {
   background-image: url("../images/illustration-hero.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 16rem; }
+  height: 16rem;
+}
+@media (min-width: 90em) {
+  .card__image {
+    height: 22rem;
+  }
+}
 
 .card__content {
   padding: 3.2rem 2.4rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
+@media (min-width: 90em) {
+  .card__content {
+    padding: 4.5rem 4.8rem 4.8rem 4.8rem;
+  }
+}
 
 .card__heading {
   font-size: 2.2rem;
   font-weight: 900;
   margin-bottom: 1.6rem;
-  color: #1f2e55; }
+  color: #1f2e55;
+}
+@media (min-width: 90em) {
+  .card__heading {
+    font-size: 2.8rem;
+    margin-bottom: 1.7rem;
+  }
+}
 
 .card__text {
   font-size: 1.5rem;
   line-height: 2.5rem;
   color: #717fa6;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 90em) {
+  .card__text {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+  }
+}
 
 .card__details {
   display: flex;
@@ -59,23 +96,44 @@ body {
   border-radius: 11px;
   padding: 1.6rem;
   align-items: center;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 90em) {
+  .card__details {
+    padding: 2.5rem 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+}
 
 .card__icon {
-  margin-right: 2rem; }
+  margin-right: 2rem;
+}
 
 .card__details-text {
-  margin-right: 5rem; }
+  margin-right: 5rem;
+}
 
 .card__details-plan {
   font-size: 1.4rem;
   color: #1f2e55;
   margin-bottom: 0.3rem;
-  font-weight: 900; }
+  font-weight: 900;
+}
+@media (min-width: 90em) {
+  .card__details-plan {
+    font-size: 1.6rem;
+  }
+}
 
 .card__details-price {
   font-size: 1.4rem;
-  color: #717fa6; }
+  color: #717fa6;
+}
+@media (min-width: 90em) {
+  .card__details-price {
+    font-size: 1.6rem;
+  }
+}
 
 .card__change {
   font-size: 1.3rem;
@@ -84,10 +142,18 @@ body {
   text-decoration: underline;
   background-color: transparent;
   border: none;
-  cursor: pointer; }
-  .card__change:hover, .card__change:active {
-    color: #766cf1;
-    text-decoration: none; }
+  cursor: pointer;
+}
+.card__change:hover,
+.card__change:active {
+  color: #766cf1;
+  text-decoration: none;
+}
+@media (min-width: 90em) {
+  .card__change {
+    font-size: 1.4rem;
+  }
+}
 
 .card__proceed {
   background-color: #382ae1;
@@ -99,9 +165,12 @@ body {
   border: none;
   font-weight: 900;
   margin-bottom: 2.4rem;
-  box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 0.19); }
-  .card__proceed:hover, .card__proceed:active {
-    background-color: #766cf1; }
+  box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 0.19);
+}
+.card__proceed:hover,
+.card__proceed:active {
+  background-color: #766cf1;
+}
 
 .card__cancel {
   color: #717fa6;
@@ -109,13 +178,18 @@ body {
   background-color: transparent;
   font-size: 1.5rem;
   font-weight: 900;
-  cursor: pointer; }
-  .card__cancel:hover, .card__cancel:active {
-    color: #1f2e55; }
+  cursor: pointer;
+}
+.card__cancel:hover,
+.card__cancel:active {
+  color: #1f2e55;
+}
 
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+}
 
 .attribution a {
-  color: #3e52a3; }
+  color: #3e52a3;
+}

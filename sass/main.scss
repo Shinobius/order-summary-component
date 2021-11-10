@@ -17,15 +17,18 @@ body {
   background-color: #e0e8ff;
   background-image: url("../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position-y: top;
   height: 100vh;
+  background-size: 100%;
+
+  @media (min-width: 90em) {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
 }
 
 .card {
-  width: 32.7rem;
-  // min-width: 32.7rem;
-  // max-width: 45rem;
+  min-width: 32.7rem;
+  max-width: 45rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,12 +45,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 16rem;
+
+  @media (min-width: 90em) {
+    height: 22rem;
+  }
 }
 
 .card__content {
   padding: 3.2rem 2.4rem;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 90em) {
+    padding: 4.5rem 4.8rem 4.8rem 4.8rem;
+  }
 }
 
 .card__heading {
@@ -55,6 +66,11 @@ body {
   font-weight: 900;
   margin-bottom: 1.6rem;
   color: #1f2e55;
+
+  @media (min-width: 90em) {
+    font-size: 2.8rem;
+    margin-bottom: 1.7rem;
+  }
 }
 
 .card__text {
@@ -62,6 +78,12 @@ body {
   line-height: 2.5rem;
   color: #717fa6;
   margin-bottom: 2.4rem;
+
+  @media (min-width: 90em) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .card__details {
@@ -71,6 +93,11 @@ body {
   padding: 1.6rem;
   align-items: center;
   margin-bottom: 2.4rem;
+
+  @media (min-width: 90em) {
+    padding: 2.5rem 2.4rem;
+    margin-bottom: 3.2rem;
+  }
 }
 
 .card__icon {
@@ -86,11 +113,19 @@ body {
   color: #1f2e55;
   margin-bottom: 0.3rem;
   font-weight: 900;
+
+  @media (min-width: 90em) {
+    font-size: 1.6rem;
+  }
 }
 
 .card__details-price {
   font-size: 1.4rem;
   color: #717fa6;
+
+  @media (min-width: 90em) {
+    font-size: 1.6rem;
+  }
 }
 
 .card__change {
@@ -106,6 +141,10 @@ body {
   &:active {
     color: #766cf1;
     text-decoration: none;
+  }
+
+  @media (min-width: 90em) {
+    font-size: 1.4rem;
   }
 }
 
