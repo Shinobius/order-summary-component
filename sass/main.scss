@@ -104,10 +104,6 @@ body {
   margin-right: 2rem;
 }
 
-.card__details-text {
-  margin-right: 5rem;
-}
-
 .card__details-plan {
   font-size: 1.4rem;
   color: #1f2e55;
@@ -136,6 +132,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 
   &:hover,
   &:active {
